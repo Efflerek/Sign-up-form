@@ -24,6 +24,7 @@ html {
     background-color: #eee;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0.3);
     position: relative;
+    overflow: hidden; /*add to javascript effect*/
 }
 
 .banner {
@@ -34,6 +35,11 @@ html {
     color: #fff;
     width: 30rem;
     z-index: 100;
+    transition: left 0.8s;
+}
+
+.container.change .banner {
+    left: 5rem;
 }
 
 .banner h1 {
@@ -46,15 +52,21 @@ html {
 }
 
 .green-bg {
-    width: 40%;
+    width: 100%; /* was 40%, modificated for javascript effects */
     height: 100%;
     background: linear-gradient(to right, #3ab19b, #4cbf91);
     position: absolute;
     top: 0;
     bottom: 0.5;
     left: 0;
+    z-index: 50; /*add z-index to javascript effect*/
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1); /*add transition to javascript effect*/
 }
 
+.container.change .green-bg {
+width: 40%; //** class .container.change add to javascript effects */
+
+}
 .green-bg button {
     position: absolute;
     top: 60%;
@@ -76,12 +88,17 @@ html {
     height: 100%;
     position: absolute;
     top: 0; /*there should be 0, due to tips */
-    left: 32rem; /*was 40rem*/
+    left: 0rem; /*was 40rem*//*UPDATED TO 0 FOR JS EFFECTS*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 10rem 0;
+    transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1)
+}
+
+.container.change .signup-form {
+left: 40rem;
 }
 
 .signup-form h1 {
