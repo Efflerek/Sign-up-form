@@ -39,7 +39,7 @@ html {
 }
 
 .container.change .banner {
-    left: 5rem;
+    left: 3rem;
 }
 
 .banner h1 {
@@ -98,7 +98,7 @@ width: 40%; //** class .container.change add to javascript effects */
 }
 
 .container.change .signup-form {
-left: 40rem;
+left: 30rem;
 }
 
 .signup-form h1 {
